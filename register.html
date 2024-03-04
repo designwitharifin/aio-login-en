@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Pondenet">
+    <meta name="keywords" content="Pondenet">
+    <title id="title"></title>
+    <meta name="theme-color" content="#01BAEE" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="" id="favicon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/css/css-bs-5/bootstrap.min.css">
+    <!-- General CSS -->
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+
+<body onload="member()" class="bg-container">
+    <!-- Note: Please change the area in mobile view and desktop view -->
+    <!-- Mobile View -->
+    <div class="app-wrap mobile-view d-md-none">
+        <!-- Content -->
+        <div class="content pb__9">
+            <div class="bg-primary px-4 head-package w-100">
+                <a href="status.html" class="align-items-center d-flex text-decoration-none">
+                    <div style="cursor:pointer;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6.75 8.25L3 12M3 12L6.75 15.75M3 12H21" stroke="#FFF" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span class="ms-2 text-white">Back</span>
+                    </div>
+                </a>
+                <div class="body-head-package">
+                    <div class="p-package">
+                        <div class="label-header-package">Price list</div>
+                        <div class="sub-bold">Voucher Package</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content-mobile-relative px-4 pt__56">
+                <div class="mb__32">
+                    <div class="row voucherCardAll"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop View -->
+    <div class="desktop-view d-none d-md-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 mt__24">
+                    <div class="bg-primary px-4 head-package rounded-3 mb__32">
+                        <a href="status.html" class="align-items-center d-flex text-decoration-none">
+                            <div style="cursor:pointer;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M6.75 8.25L3 12M3 12L6.75 15.75M3 12H21" stroke="#FFF"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                                <span class="ms-2 text-white">Back</span>
+                            </div>
+                        </a>
+                        <div class="body-head-package">
+                            <div class="p-package">
+                                <div class="label-header-package speed">Price list</div>
+                                <div class="sub-bold price">Voucher Package</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card connection details -->
+                    <div class="card-content-desktop">
+                        <div class="row mb__32 voucherCardAll">
+                            <!-- Get data from file register-wifi-mobile -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal vocher wifi -->
+    <div class="modal" id="voucherDetailsModal" tabindex="-1" aria-labelledby="voucherDetailsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="bg-primary px-4 head-package">
+                        <div id="voucherDetailsModalLabel" class="align-items-center d-flex">
+                            <div data-bs-dismiss="modal" aria-label="Close" style="cursor:pointer;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M6.75 8.25L3 12M3 12L6.75 15.75M3 12H21" stroke="#FFF"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span class="ms-2 text-white">Back</span>
+                            </div>
+                        </div>
+                        <div class="body-head-package">
+                            <div class="p-package">
+                                <div class="label-header-package voucherData"></div>
+                                <div class="sub-bold total"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 mb__32 mt__24">
+                        <div class="d-flex align-items-center align-middle label-body">
+                            <div class="label-icon">
+                                <img src="static/img/icon/router-icon.svg" alt="icon">
+                                <small class="ms-2 text-label">Active period <span class="voucherLimit"></span></small>
+                            </div>
+                            <small class="ms-auto text-label">Quota <span class="voucherData"></span></small>
+                        </div>
+                        <div class="accordion accordion-detail mt__12" id="accordionPanelsStayOpenVoucher">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpenVoucher-collapseOne" aria-expanded="true"
+                                        aria-controls="panelsStayOpenVoucher-collapseOne">
+                                        Description
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpenVoucher-collapseOne" class="accordion-collapse collapse show">
+                                    <div class="accordion-body description">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpenVoucher-collapseTwo" aria-expanded="true"
+                                        aria-controls="panelsStayOpenVoucher-collapseTwo">
+                                        Terms and conditions
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpenVoucher-collapseTwo" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        Visit the <a href="term_condition.html" style="color:var(--gray-700)">following
+                                            link</a> to view the Package Terms and Conditions
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom mt__24 mb__24"></div>
+
+                        <ul class="nav nav-underlines-dark justify-content-center mb-4 text-dark">
+                            <li class="nav-item">
+                                <a class="nav-link active" onclick="member();" data-bs-toggle="tab" type="button"
+                                    role="tab" aria-selected="true" href="#">Member</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="google();" data-bs-toggle="tab" type="button" role="tab"
+                                    aria-selected="true" href="#">Google</a>
+                            </li>
+                        </ul>
+
+                        <form name="register" action="" method="post" onsubmit="showSpinner()" id="urlRegisterAccount">
+                            <input type="hidden" name="dst" value="$(link-orig)" />
+                            <input type="hidden" name="popup" value="true" />
+
+                            <!-- Form control -->
+                            <div class="form-group mb__16">
+                                <input name="username" type="text" placeholder="Username"
+                                    class="form-control form-bg-container" required autocomplete="off" />
+                            </div>
+                            <div class="form-group mb__16" id="ps-fg">
+                                <input name="password" class="form-control form-bg-container" type="password"
+                                    placeholder="Password" required />
+                            </div>
+                            <div class="form-group mb__16">
+                                <input name="number" type="number" placeholder="WhatsApp number"
+                                    class="form-control form-bg-container" required />
+                            </div>
+                            <div class="form-group mb__16">
+                                <input type="hidden" name="limit-bytes-total" value=""
+                                    class="form-control form-bg-container" autocomplete="off" readonly />
+                            </div>
+                            <div class="form-group mb__16">
+                                <input type="hidden" name="limit-uptime" value="" class="form-control form-bg-container"
+                                    autocomplete="off" readonly />
+                            </div>
+                            <div class="form-group mb__16">
+                                <input type="hidden" name="total" value="" class="form-control form-bg-container"
+                                    autocomplete="off" readonly />
+                            </div>
+                            <div class="form-group">
+                                <input name="mac" type="hidden" placeholder="mac" value="$(mac)"
+                                    class="form-control form-bg-container" readonly />
+                            </div>
+
+                            <button id="submitBtn" type="submit" class="btn btn-sm btn-primary w-100 ripple mt__16">
+                                <span id="spinner" class="spinner-border spinner-border-sm d-none" role="status"
+                                    aria-hidden="true"></span>
+                                Register
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme JS -->
+    <script src="static/js/theme.js"></script>
+    <!-- Library JS -->
+    <script src="static/js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="static/js/js-bs-5/bootstrap.min.js"></script>
+    <!-- General JS -->
+    <script src="static/js/app.js"></script>
+    <!-- View data voucher package -->
+    <script src="static/js/setup-data/voucher-package-st.js"></script>
+    <script>
+        function showSpinner() {
+            // Show the spinner when the form is submitted
+            document.getElementById('spinner').classList.remove('d-none');
+
+            // Disable the submit button to prevent multiple submissions
+            document.getElementById('submitBtn').disabled = true;
+
+            // You can also add additional logic here if needed
+
+            // Form will continue to submit as usual after this
+        }
+    </script>
+    <script type="text/javascript">
+
+        // login page 2 
+        var username = document.register.username;
+        var password = document.register.password;
+
+        // username.placeholder = "Kode Voucher";
+
+        // set password = username
+        function setpass() {
+            var user = username.value
+            //user = user.toLowerCase();
+            username.value = user;
+            password.value = user;
+        }
+
+        username.onkeyup = setpass;
+
+        // change to google mode
+        function google() {
+            username.focus();
+            username.onkeyup = setpass;
+            username.type = "email";
+            username.placeholder = "Email";
+            password.type = "hidden";
+
+            var passwordInput = document.getElementById('ps-fg');
+            passwordInput.classList.remove('mb__48');
+            passwordInput.classList.add('mb__2');
+
+        }
+
+        // change to member mode
+        function member() {
+            username.focus();
+            username.onkeyup = "";
+            username.type = "text";
+            username.placeholder = "Username";
+            password.type = "password";
+            usernameLabel.textContent = "Username"; // set label text
+            passwordLabel.textContent = "Password"; // set label text
+
+            var passwordInput = document.getElementById('ps-fg');
+            passwordInput.classList.remove('mb__16');
+            passwordInput.classList.add('mb__16');
+
+        }
+    </script>
+</body>
+
+</html>

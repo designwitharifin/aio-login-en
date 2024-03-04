@@ -1,0 +1,44 @@
+{
+    "voucher": [
+        {
+            "id": 1,
+            "limit": "1 day",
+            "limitUpTime": "1d",
+            "devices": "1",
+            "data": "3Gb",
+            "limitBytesTotal": "3G",
+            "description": "Internet quota that can be used across all apps with unlimited speed",
+            "total": "$0,19"
+        },
+        {
+            "id": 2,
+            "limit": "2 day",
+            "limitUpTime": "2d",
+            "devices": "1",
+            "data": "5Gb",
+            "limitBytesTotal": "5G",
+            "description": "Internet quota that can be used across all apps with unlimited speed",
+            "total": "$0,31"
+        },
+        {
+            "id": 3,
+            "limit": "7 day",
+            "limitUpTime": "7d",
+            "devices": "1",
+            "data": "7Gb",
+            "limitBytesTotal": "7G",
+            "description": "Internet quota that can be used across all apps with unlimited speed",
+            "total": "$0,94"
+        },
+        {
+            "id": 4,
+            "limit": "30 day",
+            "limitUpTime": "30d",
+            "devices": "1",
+            "data": "40Gb",
+            "limitBytesTotal": "40G",
+            "description": "Internet quota that can be used across all apps with unlimited speed",
+            "total": "$2,510"
+        }
+    ]
+}

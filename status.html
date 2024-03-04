@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Pondenet">
+    <meta name="keywords" content="Pondenet">
+    <title id="title"></title>
+    <meta name="theme-color" content="#01BAEE" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="" id="favicon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/css/css-bs-5/bootstrap.min.css">
+    <!-- General CSS -->
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+
+<body class="bg-container">
+    <!-- Note: Please change the area in mobile view and desktop view -->
+    <!-- Mobile View -->
+    <div class="app-wrap mobile-view d-md-none">
+        <!-- Content -->
+        <div class="content pb__9">
+            <section class="bg-header-primary">
+            </section>
+
+            <section class="px-4 header-content">
+                <div class="avatar-container">
+                    <div class="d-flex align-items-center">
+                        <div class="header-info">
+                            <a href="profile.html">
+                                <img src="static/img/avatar.png" alt="avatar">
+                            </a>
+                        </div>
+                        <div class="header-info">
+                            <h4 class="username">$(username)</h4>
+                            <span class="ip">$(ip)</span>
+                        </div>
+                        <a href="notification.html" type="button" class="ms-auto position-relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M17.1 16.8H6.90005V9.6C6.90005 6.4008 9.45004 4.8 11.9988 4.8H12.0013C14.5501 4.8 17.1 6.4008 17.1 9.6V16.8ZM13.275 20.4C13.275 21.0624 12.7038 21.6 12 21.6C11.2962 21.6 10.725 21.0624 10.725 20.4V19.2H13.275V20.4ZM19.65 16.8V9.6C19.65 5.3364 16.6308 2.96998 13.275 2.49478V0H10.725V2.49478C7.36925 2.96998 4.35005 5.3364 4.35005 9.6V16.8H1.80005V19.2H8.17505V20.4C8.17505 22.3884 9.88737 24 12 24C14.1127 24 15.825 22.3884 15.825 20.4V19.2H22.2V16.8H19.65Z"
+                                    fill="white" />
+                            </svg>
+                            <span class="notif-indicator position-absolute p-1 rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <ul class="nav nav-underlines justify-content-center mt__8">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Status</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                </ul>
+            </section>
+            <div class="bg-rounded">
+                <div class="card-content-mobile container px-4">
+                    <div class="card">
+                        <div class="card-body pb-3">
+                            <div class="d-flex align-items-center">
+                                <span class="label-speed-header">Speed</span>
+                                <a href="#" class="text-decoration-none ms-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_351_1945)">
+                                            <path
+                                                d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+                                                fill="#E5E7EB" />
+                                            <path
+                                                d="M12 20C7.6 20 4 16.4 4 12C4 7.6 7.6 4 12 4C13.4 4 14.8 4.4 16 5.1C16.4 5.3 16.4 5.7 16.3 6.1C16.1 6.5 15.7 6.5 15.3 6.4C14.3 5.8 13.2 5.5 12 5.5C8.4 5.5 5.5 8.4 5.5 12C5.5 15.6 8.4 18.5 12 18.5C15.6 18.5 18.5 15.6 18.5 12C18.5 10.9 18.2 9.7 17.6 8.7C17.4 8.3 17.5 7.9 17.9 7.7C18.3 7.5 18.7 7.6 18.9 8C19.6 9.2 20 10.5 20 12C20 16.4 16.4 20 12 20Z"
+                                                fill="#6B7280" />
+                                            <path
+                                                d="M12.1 14.0996C11.5 14.0996 11 13.7996 10.5 13.4996C9.59995 12.5996 9.59995 11.2996 10.5 10.3996C11.1 9.79958 13.8 8.69958 14.6 8.39958C14.9 8.29958 15.1 8.39958 15.4 8.59958C15.6 8.79958 15.7 9.09958 15.6 9.39958C15.3 10.1996 14.3 12.8996 13.7 13.4996C13.2 13.8996 12.6 14.0996 12.1 14.0996ZM13.6 10.3996C12.6 10.7996 11.8 11.1996 11.6 11.4996C11.3 11.7996 11.3 12.1996 11.6 12.5996C11.9 12.8996 12.4 12.8996 12.7 12.5996C12.8 12.2996 13.1 11.3996 13.6 10.3996Z"
+                                                fill="#6B7280" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_351_1945">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                            <hr class="hr-card-header">
+                            <div class="ping row">
+                                <div class="col">
+                                    <span class="label-speed">Upload</span>
+                                    <div class="d-flex">
+                                        <h5 class="data-speed n__upload" data-bytes="$(bytes-out)"></h5>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <g clip-path="url(#clip0_351_1956)">
+                                                <path
+                                                    d="M20 10C20 7.34784 18.9464 4.8043 17.0711 2.92893C15.1957 1.05357 12.6522 0 10 0C7.34784 0 4.8043 1.05357 2.92893 2.92893C1.05357 4.8043 0 7.34784 0 10C0 12.6522 1.05357 15.1957 2.92893 17.0711C4.8043 18.9464 7.34784 20 10 20C12.6522 20 15.1957 18.9464 17.0711 17.0711C18.9464 15.1957 20 12.6522 20 10ZM10.625 14.375C10.625 14.5408 10.5592 14.6997 10.4419 14.8169C10.3247 14.9342 10.1658 15 10 15C9.83424 15 9.67527 14.9342 9.55806 14.8169C9.44085 14.6997 9.375 14.5408 9.375 14.375V7.13375L6.6925 9.8175C6.57514 9.93486 6.41597 10.0008 6.25 10.0008C6.08403 10.0008 5.92486 9.93486 5.8075 9.8175C5.69014 9.70014 5.62421 9.54097 5.62421 9.375C5.62421 9.20903 5.69014 9.04986 5.8075 8.9325L9.5575 5.1825C9.61556 5.1243 9.68453 5.07812 9.76046 5.04661C9.83639 5.0151 9.91779 4.99888 10 4.99888C10.0822 4.99888 10.1636 5.0151 10.2395 5.04661C10.3155 5.07812 10.3844 5.1243 10.4425 5.1825L14.1925 8.9325C14.3099 9.04986 14.3758 9.20903 14.3758 9.375C14.3758 9.54097 14.3099 9.70014 14.1925 9.8175C14.0751 9.93486 13.916 10.0008 13.75 10.0008C13.584 10.0008 13.4249 9.93486 13.3075 9.8175L10.625 7.13375V14.375Z"
+                                                    fill="#01BAEE" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_351_1956">
+                                                    <rect width="20" height="20" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <span class="label-speed">Download</span>
+                                    <div class="d-flex">
+                                        <h5 class="data-speed n__download" data-bytes="$(bytes-in)"></h5>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
+                                            viewBox="0 0 21 20" fill="none">
+                                            <g clip-path="url(#clip0_351_1962)">
+                                                <path
+                                                    d="M0.5 10C0.5 12.6522 1.55357 15.1957 3.42893 17.0711C5.3043 18.9464 7.84783 20 10.5 20C13.1522 20 15.6957 18.9464 17.5711 17.0711C19.4464 15.1957 20.5 12.6522 20.5 10C20.5 7.34783 19.4464 4.8043 17.5711 2.92893C15.6957 1.05357 13.1522 0 10.5 0C7.84783 0 5.3043 1.05357 3.42893 2.92893C1.55357 4.8043 0.5 7.34783 0.5 10ZM9.875 5.625C9.875 5.45924 9.94085 5.30027 10.0581 5.18306C10.1753 5.06585 10.3342 5 10.5 5C10.6658 5 10.8247 5.06585 10.9419 5.18306C11.0592 5.30027 11.125 5.45924 11.125 5.625L11.125 12.8663L13.8075 10.1825C13.9249 10.0651 14.084 9.99921 14.25 9.99921C14.416 9.99921 14.5751 10.0651 14.6925 10.1825C14.8099 10.2999 14.8758 10.459 14.8758 10.625C14.8758 10.791 14.8099 10.9501 14.6925 11.0675L10.9425 14.8175C10.8844 14.8757 10.8155 14.9219 10.7395 14.9534C10.6636 14.9849 10.5822 15.0011 10.5 15.0011C10.4178 15.0011 10.3364 14.9849 10.2605 14.9534C10.1845 14.9219 10.1156 14.8757 10.0575 14.8175L6.3075 11.0675C6.19014 10.9501 6.12421 10.791 6.12421 10.625C6.12421 10.459 6.19014 10.2999 6.3075 10.1825C6.42486 10.0651 6.58403 9.99921 6.75 9.99921C6.91597 9.99921 7.07514 10.0651 7.1925 10.1825L9.875 12.8663L9.875 5.625Z"
+                                                    fill="#01BAEE" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_351_1962">
+                                                    <rect width="20" height="20" fill="white"
+                                                        transform="matrix(-1 0 0 -1 20.5 20)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card Connection details -->
+                    <div class="card mt__24">
+                        <div class="card-header pb-0">
+                            Connection details
+                        </div>
+                        <div class="card-body pt-0">
+                            <!-- IP Address -->
+                            <div class="label-info-item">
+                                <div class="d-flex align-items-center">
+                                    <img src="static/img/icon/ip-icon.png" alt="icon" class="info-icon">
+                                    <strong>IP Address</strong>
+                                    <span class="ms-auto text-end">$(ip)</span>
+                                </div>
+                            </div>
+                            <!-- MAC Address -->
+                            <div class="label-info-item">
+                                <div class="d-flex align-items-center">
+                                    <img src="static/img/icon/mac-icon.png" alt="icon" class="info-icon">
+                                    <strong>MAC Address</strong>
+                                    <span class="ms-auto text-end">$(mac)</span>
+                                </div>
+                            </div>
+                            <!-- Connect -->
+                            <div class="label-info-item">
+                                <div class="d-flex align-items-center">
+                                    <img src="static/img/icon/connected-icon.png" alt="icon" class="info-icon">
+                                    <strong>Connect</strong>
+                                    <span class="ms-auto text-end n__uptime">$(uptime)</span>
+                                </div>
+                            </div>
+                            $(if remain-bytes-total)
+                            <!-- Remaining Quota -->
+                            <div class="label-info-item">
+                                <div class="d-flex align-items-center">
+                                    <img src="static/img/icon/meter-icon.png" alt="icon" class="info-icon">
+                                    <strong>Remaining Quota</strong>
+                                    <span class="ms-auto text-end">$(remain-bytes-total-nice)</span>
+                                </div>
+                            </div>
+                            $(endif)
+                            $(if session-time-left)
+                            <!-- Remaining time -->
+                            <div class="label-info-item">
+                                <div class="d-flex align-items-center">
+                                    <img src="static/img/icon/timer-icon.png" alt="icon" class="info-icon">
+                                    <strong>Remaining time</strong>
+                                    <span class="ms-auto text-end n__session--time">$(session-time-left)</span>
+                                </div>
+                            </div>
+                            $(endif)
+                        </div>
+                    </div>
+
+                    <div class="divider-title d-flex align-items-center mt__24">
+                        <span>WIFI package</span>
+                        <a href="wifi_package.html" class="ms-auto text-decoration-none">See all</a>
+                    </div>
+                    <div class="mb__32">
+                        <!-- Show data from wifi-package.js -->
+                        <div class="wifiCard"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop View -->
+    <div class="desktop-view d-none d-md-block">
+        <!-- Navbar -->
+        <nav class="navbar sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="" alt="" class="logo">
+                </a>
+                <a href="notification.html" type="button" class="ms-auto position-relative">
+                    <svg class="notif-color" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M17.1 16.8H6.90005V9.6C6.90005 6.4008 9.45004 4.8 11.9988 4.8H12.0013C14.5501 4.8 17.1 6.4008 17.1 9.6V16.8ZM13.275 20.4C13.275 21.0624 12.7038 21.6 12 21.6C11.2962 21.6 10.725 21.0624 10.725 20.4V19.2H13.275V20.4ZM19.65 16.8V9.6C19.65 5.3364 16.6308 2.96998 13.275 2.49478V0H10.725V2.49478C7.36925 2.96998 4.35005 5.3364 4.35005 9.6V16.8H1.80005V19.2H8.17505V20.4C8.17505 22.3884 9.88737 24 12 24C14.1127 24 15.825 22.3884 15.825 20.4V19.2H22.2V16.8H19.65Z" />
+                    </svg>
+                    <span class="notif-indicator position-absolute p-1 rounded-circle">
+                        <span class="visually-hidden">New alerts</span>
+                    </span>
+                </a>
+            </div>
+        </nav>
+        <!-- Sidebar -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-12 mt__24">
+                    <nav class="side-nav-desktop sticky-top">
+                        <div class="sidenav-desktop__backdrop">
+                            <img src="static/img/bg-pattern/bg-pattern-desktop.svg" alt="swoosh-background"
+                                class="w-100">
+                        </div>
+                        <div class="avatar-container-desktop text-center">
+                            <a href="profile.html">
+                                <img src="static/img/avatar.png" alt="profile-avatar">
+                            </a>
+                            <div class="header-info mt__6">
+                                <h4 class="username">$(username)</h4>
+                                <span class="ip">$(ip)</span>
+                            </div>
+                        </div>
+                        <div class="nav-item-desktop">
+                            <a href="#" class="nav-link-desktop active">
+                                <img src="static/img/icon/router-icon.svg" alt="menu-icon" class="me-2">
+                                Status
+                                <svg class="ms-auto svg-color" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="0 0 16 16" fill="none">
+                                    <path d="M5.5 3L10.5 8L5.5 13" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <a href="menu.html" class="nav-link-desktop">
+                                <img src="static/img/icon/menu-icon.svg" alt="menu-icon" class="me-2">
+                                Menu
+                                <svg class="ms-auto svg-color" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="0 0 16 16" fill="none">
+                                    <path d="M5.5 3L10.5 8L5.5 13" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <a href="services.html" class="nav-link-desktop">
+                                <img src="static/img/icon/services-icon.svg" alt="menu-icon" class="me-2">
+                                Services
+                                <svg class="ms-auto svg-color" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="0 0 16 16" fill="none">
+                                    <path d="M5.5 3L10.5 8L5.5 13" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <a href="#" class="nav-link-desktop" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                                <img src="static/img/icon/logout-icon.svg" alt="menu-icon" class="me-2">
+                                Logout
+                                <svg class="ms-auto svg-color" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="0 0 16 16" fill="none">
+                                    <path d="M5.5 3L10.5 8L5.5 13" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-lg-9 col-md-12 mt__24">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="card card-speed-desktop">
+                                <div class="card-body">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_351_1956)">
+                                            <path
+                                                d="M20 10C20 7.34784 18.9464 4.8043 17.0711 2.92893C15.1957 1.05357 12.6522 0 10 0C7.34784 0 4.8043 1.05357 2.92893 2.92893C1.05357 4.8043 0 7.34784 0 10C0 12.6522 1.05357 15.1957 2.92893 17.0711C4.8043 18.9464 7.34784 20 10 20C12.6522 20 15.1957 18.9464 17.0711 17.0711C18.9464 15.1957 20 12.6522 20 10ZM10.625 14.375C10.625 14.5408 10.5592 14.6997 10.4419 14.8169C10.3247 14.9342 10.1658 15 10 15C9.83424 15 9.67527 14.9342 9.55806 14.8169C9.44085 14.6997 9.375 14.5408 9.375 14.375V7.13375L6.6925 9.8175C6.57514 9.93486 6.41597 10.0008 6.25 10.0008C6.08403 10.0008 5.92486 9.93486 5.8075 9.8175C5.69014 9.70014 5.62421 9.54097 5.62421 9.375C5.62421 9.20903 5.69014 9.04986 5.8075 8.9325L9.5575 5.1825C9.61556 5.1243 9.68453 5.07812 9.76046 5.04661C9.83639 5.0151 9.91779 4.99888 10 4.99888C10.0822 4.99888 10.1636 5.0151 10.2395 5.04661C10.3155 5.07812 10.3844 5.1243 10.4425 5.1825L14.1925 8.9325C14.3099 9.04986 14.3758 9.20903 14.3758 9.375C14.3758 9.54097 14.3099 9.70014 14.1925 9.8175C14.0751 9.93486 13.916 10.0008 13.75 10.0008C13.584 10.0008 13.4249 9.93486 13.3075 9.8175L10.625 7.13375V14.375Z"
+                                                fill="#01BAEE" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_351_1956">
+                                                <rect width="20" height="20" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <div class="label-speed-desktop mt__16">Upload</div>
+                                    <h5 class="data-speed-desktop mt__2 n__upload" data-bytes="$(bytes-out)"></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="card card-speed-desktop">
+                                <div class="card-body">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_394_1875)">
+                                            <path
+                                                d="M0 12C0 15.1826 1.26428 18.2348 3.51472 20.4853C5.76515 22.7357 8.8174 24 12 24C15.1826 24 18.2348 22.7357 20.4853 20.4853C22.7357 18.2348 24 15.1826 24 12C24 8.8174 22.7357 5.76515 20.4853 3.51472C18.2348 1.26428 15.1826 0 12 0C8.8174 0 5.76515 1.26428 3.51472 3.51472C1.26428 5.76515 0 8.8174 0 12ZM11.25 6.75C11.25 6.55109 11.329 6.36032 11.4697 6.21967C11.6103 6.07902 11.8011 6 12 6C12.1989 6 12.3897 6.07902 12.5303 6.21967C12.671 6.36032 12.75 6.55109 12.75 6.75V15.4395L15.969 12.219C16.1098 12.0782 16.3008 11.9991 16.5 11.9991C16.6992 11.9991 16.8902 12.0782 17.031 12.219C17.1718 12.3598 17.2509 12.5508 17.2509 12.75C17.2509 12.9492 17.1718 13.1402 17.031 13.281L12.531 17.781C12.4613 17.8508 12.3786 17.9063 12.2875 17.9441C12.1963 17.9819 12.0987 18.0013 12 18.0013C11.9013 18.0013 11.8037 17.9819 11.7126 17.9441C11.6214 17.9063 11.5387 17.8508 11.469 17.781L6.969 13.281C6.82817 13.1402 6.74905 12.9492 6.74905 12.75C6.74905 12.5508 6.82817 12.3598 6.969 12.219C7.10983 12.0782 7.30084 11.9991 7.5 11.9991C7.69916 11.9991 7.89017 12.0782 8.031 12.219L11.25 15.4395V6.75Z"
+                                                fill="#01BAEE" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_394_1875">
+                                                <rect width="24" height="24" fill="white"
+                                                    transform="matrix(-1 0 0 -1 24 24)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <div class="label-speed-desktop mt__16">Download</div>
+                                    <h5 class="data-speed-desktop mt__2 n__download" data-bytes="$(bytes-in)"></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="card card-speed-desktop">
+                                <div class="card-body">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_542_1419)">
+                                            <path
+                                                d="M3 3C2.20435 3 1.44129 3.31607 0.87868 3.87868C0.316071 4.44129 0 5.20435 0 6L0 7.5C0 8.29565 0.316071 9.05871 0.87868 9.62132C1.44129 10.1839 2.20435 10.5 3 10.5H11.25V15C10.6533 15 10.081 15.2371 9.65901 15.659C9.23705 16.081 9 16.6533 9 17.25H0.75C0.551088 17.25 0.360322 17.329 0.21967 17.4697C0.0790176 17.6103 0 17.8011 0 18C0 18.1989 0.0790176 18.3897 0.21967 18.5303C0.360322 18.671 0.551088 18.75 0.75 18.75H9C9 19.3467 9.23705 19.919 9.65901 20.341C10.081 20.7629 10.6533 21 11.25 21H12.75C13.3467 21 13.919 20.7629 14.341 20.341C14.7629 19.919 15 19.3467 15 18.75H23.25C23.4489 18.75 23.6397 18.671 23.7803 18.5303C23.921 18.3897 24 18.1989 24 18C24 17.8011 23.921 17.6103 23.7803 17.4697C23.6397 17.329 23.4489 17.25 23.25 17.25H15C15 16.6533 14.7629 16.081 14.341 15.659C13.919 15.2371 13.3467 15 12.75 15V10.5H21C21.7956 10.5 22.5587 10.1839 23.1213 9.62132C23.6839 9.05871 24 8.29565 24 7.5V6C24 5.20435 23.6839 4.44129 23.1213 3.87868C22.5587 3.31607 21.7956 3 21 3H3ZM3.75 7.5C3.55109 7.5 3.36032 7.42098 3.21967 7.28033C3.07902 7.13968 3 6.94891 3 6.75C3 6.55109 3.07902 6.36032 3.21967 6.21967C3.36032 6.07902 3.55109 6 3.75 6C3.94891 6 4.13968 6.07902 4.28033 6.21967C4.42098 6.36032 4.5 6.55109 4.5 6.75C4.5 6.94891 4.42098 7.13968 4.28033 7.28033C4.13968 7.42098 3.94891 7.5 3.75 7.5ZM6.75 7.5C6.55109 7.5 6.36032 7.42098 6.21967 7.28033C6.07902 7.13968 6 6.94891 6 6.75C6 6.55109 6.07902 6.36032 6.21967 6.21967C6.36032 6.07902 6.55109 6 6.75 6C6.94891 6 7.13968 6.07902 7.28033 6.21967C7.42098 6.36032 7.5 6.55109 7.5 6.75C7.5 6.94891 7.42098 7.13968 7.28033 7.28033C7.13968 7.42098 6.94891 7.5 6.75 7.5Z"
+                                                fill="#01BAEE" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_542_1419">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <div class="label-speed-desktop mt__16">IP Address</div>
+                                    <h5 class="data-speed-desktop mt__2">$(ip)</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card Connection details -->
+                    <div class="card-content-desktop">
+                        <div class="card">
+                            <div class="card-header pb-0">
+                                Connection details
+                            </div>
+                            <div class="card-body pt-0">
+                                <!-- IP Address -->
+                                <div class="label-info-item">
+                                    <div class="d-flex align-items-center">
+                                        <img src="static/img/icon/ip-icon.png" alt="icon" class="info-icon">
+                                        <strong>IP Address</strong>
+                                        <span class="ms-auto text-end">$(ip)</span>
+                                    </div>
+                                </div>
+                                <!-- MAC Address -->
+                                <div class="label-info-item">
+                                    <div class="d-flex align-items-center">
+                                        <img src="static/img/icon/mac-icon.png" alt="icon" class="info-icon">
+                                        <strong>MAC Address</strong>
+                                        <span class="ms-auto text-end">$(ip)</span>
+                                    </div>
+                                </div>
+                                <!-- Connect -->
+                                <div class="label-info-item">
+                                    <div class="d-flex align-items-center">
+                                        <img src="static/img/icon/connected-icon.png" alt="icon" class="info-icon">
+                                        <strong>Connect</strong>
+                                        <span class="ms-auto text-end n__uptime-desktop">$(uptime)</span>
+                                    </div>
+                                </div>
+                                $(if remain-bytes-total)
+                                <!-- Remaining Quota -->
+                                <div class="label-info-item">
+                                    <div class="d-flex align-items-center">
+                                        <img src="static/img/icon/meter-icon.png" alt="icon" class="info-icon">
+                                        <strong>Remaining Quota</strong>
+                                        <span class="ms-auto text-end">$(remain-bytes-total-nice)</span>
+                                    </div>
+                                </div>
+                                $(endif)
+                                $(if session-time-left)
+                                <!-- Remaining time -->
+                                <div class="label-info-item">
+                                    <div class="d-flex align-items-center">
+                                        <img src="static/img/icon/timer-icon.png" alt="icon" class="info-icon">
+                                        <strong>Remaining time</strong>
+                                        <span
+                                            class="ms-auto text-end n__session--time-desktop">$(session-time-left)</span>
+                                    </div>
+                                </div>
+                                $(endif)
+                            </div>
+                        </div>
+                        <!-- Card install WIFI -->
+
+                        <div class="card mt__24">
+                            <div class="card-body">
+                                <div class="divider-title d-flex align-items-center">
+                                    <span>WIFI package</span>
+                                    <a href="wifi_package.html"
+                                        class="ms-auto text-decoration-none align-items-center d-flex">See all
+                                        <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb__32 wifiCard">
+                            <!-- Get data from file register-wifi-mobile -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal logout -->
+    <div class="modal modal-logout" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
+                        <g clip-path="url(#clip0_351_2982)">
+                            <path
+                                d="M35.3484 31.5802C38.1025 28.2593 39.7639 23.9997 39.7807 19.3522C39.8191 8.7557 31.0961 -0.00023437 20.4996 4.70512e-09C9.89761 0.00023438 1.29441 8.5575 1.21972 19.1419C1.14504 29.7264 9.7141 38.452 20.2984 38.5606C22.0554 38.5787 23.7586 38.3609 25.379 37.9379C26.2933 37.6992 27.263 37.8234 28.0805 38.2975C29.2295 38.9638 30.5496 39.543 31.8757 39.9268C33.2717 40.3308 34.5431 38.9945 34.1 37.6105C33.7471 36.508 33.8268 35.4035 34.0212 34.3674C34.214 33.3396 34.6808 32.3852 35.3484 31.5802Z"
+                                fill="#02C2F2" />
+                            <path
+                                d="M34.1 37.6102C33.7471 36.5077 33.8268 35.4032 34.0212 34.367C34.2141 33.3393 34.6809 32.3848 35.3484 31.58C36.4924 30.201 37.4385 28.6693 38.1596 27.0291C23.2412 34.7083 5.2205 20.8925 14.4998 0.953125C6.83121 3.46219 1.27964 10.6488 1.21972 19.1416C1.14504 29.7262 9.7141 38.4518 20.2984 38.5604C22.0554 38.5784 23.7586 38.3606 25.379 37.9377C26.2933 37.699 27.263 37.8232 28.0805 38.2973C29.2295 38.9636 30.5495 39.5428 31.8757 39.9266C33.2717 40.3305 34.543 38.9943 34.1 37.6102Z"
+                                fill="#007DAC" />
+                            <path
+                                d="M23.3651 27.021V14.8235C23.3651 13.7804 22.2991 13.0768 21.34 13.4867C20.2777 13.9407 19.1432 14.2025 17.9894 14.2597L16.0868 14.3541C15.8726 14.3648 15.6708 14.4573 15.523 14.6126C15.3752 14.768 15.2927 14.9742 15.2927 15.1886V16.3786C15.2927 16.8401 15.6668 17.2142 16.1282 17.2142H17.7976C17.9813 17.2142 18.1574 17.2871 18.2873 17.417C18.4171 17.5469 18.4901 17.723 18.4901 17.9066V27.0209H16.7809C15.9591 27.0209 15.2927 27.6872 15.2927 28.5091V29.1151C15.2927 29.937 15.959 30.6033 16.7809 30.6033H25.0743C25.8962 30.6033 26.5625 29.9369 26.5625 29.1151V28.5091C26.5625 27.6872 25.8962 27.0209 25.0743 27.0209L23.3651 27.021Z"
+                                fill="white" />
+                            <path
+                                d="M20.9275 10.6465C22.2737 10.6465 23.365 9.55518 23.365 8.20898C23.365 6.86279 22.2737 5.77148 20.9275 5.77148C19.5813 5.77148 18.49 6.86279 18.49 8.20898C18.49 9.55518 19.5813 10.6465 20.9275 10.6465Z"
+                                fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_351_2982">
+                                <rect width="40" height="40" fill="white" transform="translate(0.5)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <div class="modal-head">Ready to go?</div>
+                    <span class="modal-sub">Select "Logout" below if you are ready to
+                        end your current session.</span>
+
+                    <div class="d-flex mt__24">
+                        <a href="#" class="btn btn-lightgray d-block w-100 me-1 ripple"
+                            data-bs-dismiss="modal">Cancel</a>
+                        <a href="logout.html?erase-cookie=true"
+                            class="btn btn-primary d-block w-100 ms-1 ripple">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal wifi subscription -->
+    <div class="modal" id="wifiDetailsModal" data-bs-backdrop="static" tabindex="-1"
+        aria-labelledby="wifiDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="bg-primary px-4 head-package">
+                        <div id="wifiDetailsModalLabel" class="align-items-center d-flex">
+                            <a href="status.html" class="text-decoration-none" style="cursor:pointer;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M6.75 8.25L3 12M3 12L6.75 15.75M3 12H21" stroke="#FFF"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span class="ms-2 text-white">Back</span>
+                            </a>
+                        </div>
+                        <div class="body-head-package">
+                            <div class="p-package">
+                                <div class="label-header-package speed"></div>
+                                <div class="sub-bold price"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 mb__32 mt__24">
+                        <div class="d-flex align-items-center align-middle label-body">
+                            <div class="label-icon">
+                                <img src="static/img/icon/router-icon.svg" alt="icon">
+                                <small class="ms-2 text-label">IN Fee Discount 70%</small>
+                            </div>
+                            <small class="ms-auto text-label">Up to <span class="speedUpto"></span> Mbps</small>
+                        </div>
+                        <div class="accordion accordion-detail mt__12" id="accordionPanelsStayOpenExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                        aria-controls="panelsStayOpen-collapseOne">
+                                        Description
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                    <div class="accordion-body description">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true"
+                                        aria-controls="panelsStayOpen-collapseTwo">
+                                        Terms and conditions
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        Visit the <a href="term_condition.html" style="color:var(--gray-700)">following
+                                            link</a> to see the package terms & conditions
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-bottom mt__24 mb__24"></div>
+                        <h2 class="accordion-button mb__32">New WIFI installation form</h2>
+                        <form action="" method="post" id="urlAppsScript">
+                            <div class="form-group mb__16">
+                                <input type="text" name="name" class="form-control form-bg-container"
+                                    placeholder="Full name" autocomplete="off" required />
+                            </div>
+                            <div class="form-group mb__16">
+                                <input type="email" name="email" class="form-control form-bg-container"
+                                    placeholder="Email" autocomplete="off" required />
+                            </div>
+                            <div class="form-group mb__16">
+                                <input type="number" name="phone" class="form-control form-bg-container"
+                                    placeholder="WhatsApp no" autocomplete="off" required />
+                            </div>
+                            <div class="form-group mb__16">
+                                <input type="text" name="speed" value="" class="form-control form-bg-container"
+                                    autocomplete="off" readonly />
+                            </div>
+                            <div class="form-group mb__16">
+                                <input type="text" name="price" value="" class="form-control form-bg-container"
+                                    autocomplete="off" readonly />
+                            </div>
+                            <div class="form-group mb__16">
+                                <textarea name="address" id="" cols="30" placeholder="Installation address"
+                                    class="form-control form-bg-container" autocomplete="off" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-primary w-100 ripple">Confirmation</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme JS -->
+    <script src="static/js/theme.js"></script>
+    <!-- Library JS -->
+    <script src="static/js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="static/js/js-bs-5/bootstrap.min.js"></script>
+    <!-- General JS -->
+    <script src="static/js/app.js"></script>
+    <!-- View data wifi package -->
+    <script src="static/js/setup-data/wifi-package-st.js"></script>
+    <script>
+        $(function () {
+            function formatBytes(bytes, decimals = 2) {
+                if (!+bytes) return '0 Bytes';
+
+                const k = 1024;
+                const dm = decimals < 0 ? 0 : decimals;
+                const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+
+                return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`;
+            }
+
+            $(".n__download").each(function () {
+                const bytes = $(this).data('bytes');
+                $(this).text(formatBytes(bytes));
+            });
+
+            $(".n__upload").each(function () {
+                const bytes = $(this).data('bytes');
+                $(this).text(formatBytes(bytes));
+            });
+
+            // Mobile
+            var uptimes = $('.n__uptime').text().replace(/d/g, ' DAY ').replace(/h/g, ' HOURS ').replace(/m/g, ' MINUTES ').replace(/s/g, ' SEC ');
+            $('.n__uptime').html(uptimes);
+            var sessionTimeLeft = $('.n__session--time').text().replace(/d/g, ' DAY ').replace(/h/g, ' HOURS ').replace(/m/g, ' MINUTES ').replace(/s/g, ' SEC ');
+            $('.n__session--time').html(sessionTimeLeft);
+
+            // Desktop
+            var uptimes = $('.n__uptime-desktop').text().replace(/d/g, ' DAY ').replace(/h/g, ' HOURS ').replace(/m/g, ' MINUTES ').replace(/s/g, ' SEC ');
+            $('.n__uptime-desktop').html(uptimes);
+            var sessionTimeLeft = $('.n__session--time-desktop').text().replace(/d/g, ' DAY ').replace(/h/g, ' HOURS ').replace(/m/g, ' MINUTES ').replace(/s/g, ' SEC ');
+            $('.n__session--time-desktop').html(sessionTimeLeft);
+
+        }); 
+    </script>
+
+    <!-- <script>
+        var usr = document.getElementById('user').innerHTML
+        var url = "https://yourdns.com/status/status.php?name=";
+        var SessionName = "yourSessionName"
+        var getvalid = url + usr + "&session=" + SessionName
+        document.getElementById("exp").src = getvalid;
+    </script> -->
+</body>
+
+</html>

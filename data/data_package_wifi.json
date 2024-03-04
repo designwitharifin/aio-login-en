@@ -1,0 +1,72 @@
+{
+    "wifi": [
+        {
+            "id": 1,
+            "speed": "Internet 30 Mbps",
+            "speedUpTo": "30",
+            "price": "$18,99",
+            "description": "Discount IN Fee 70% speed up to 30 Mpbs and OTT Disney + Hotsar",
+            "iconBenefit1": "static/img/icon/icon-home.png",
+            "iconBenefit2": "static/img/icon/icon-home.png",
+            "iconBenefit3": "static/img/icon/icon-netflix.png",
+            "iconBenefit4": "static/img/icon/icon-disney.png",
+            "iconBenefit5": "static/img/icon/icon-maxstream.png",
+            "textBenefit1": "70% discount on installation fee",
+            "textBenefit2": "Internet speeds up to 30 Mbps",
+            "textBenefit3": "<del>Netflix Basic</del>",
+            "textBenefit4": "OTT Disney+ Hotstar",
+            "textBenefit5": "<del>OTT Max Stream</del>"
+        },
+        {
+            "id": 2,
+            "speed": "Internet 30 Mbps",
+            "speedUpTo": "30",
+            "price": "$17,99",
+            "description": "70% discount on installation fee",
+            "iconBenefit1": "static/img/icon/icon-home.png",
+            "iconBenefit2": "static/img/icon/icon-home.png",
+            "iconBenefit3": "static/img/icon/icon-netflix.png",
+            "iconBenefit4": "static/img/icon/icon-disney.png",
+            "iconBenefit5": "static/img/icon/icon-maxstream.png",
+            "textBenefit1": "70% discount on installation fee",
+            "textBenefit2": "Internet speeds up to 30 Mbps",
+            "textBenefit3": "<del>Netflix Basic</del>",
+            "textBenefit4": "<del>OTT Disney+ Hotstar</del>",
+            "textBenefit5": "<del>OTT Max Stream</del>"
+        },
+        {
+            "id": 3,
+            "speed": "Internet 50 Mbps",
+            "speedUpTo": "50",
+            "price": "$18,99",
+            "description": "Discount IN Fees 70% speed up to 50 Mpbs more efficient and faster for sure.",
+            "iconBenefit1": "static/img/icon/icon-home.png",
+            "iconBenefit2": "static/img/icon/icon-home.png",
+            "iconBenefit3": "static/img/icon/icon-netflix.png",
+            "iconBenefit4": "static/img/icon/icon-disney.png",
+            "iconBenefit5": "static/img/icon/icon-maxstream.png",
+            "textBenefit1": "70% discount on installation fee",
+            "textBenefit2": "Internet speeds up to 50 Mbps",
+            "textBenefit3": "<del>Netflix Basic</del>",
+            "textBenefit4": "<del>OTT Disney+ Hotstar</del>",
+            "textBenefit5": "<del>OTT Max Stream</del>"
+        },
+        {
+            "id": 4,
+            "speed": "Internet 100 Mbps",
+            "speedUpTo": "100",
+            "price": "$23,99",
+            "description": "Discount IN Fee 70% speed up to 100 Mpbs and Netflix Basic + OTT Disney + Hotsar + OTT Max Stream, get a super complete package",
+            "iconBenefit1": "static/img/icon/icon-home.png",
+            "iconBenefit2": "static/img/icon/icon-home.png",
+            "iconBenefit3": "static/img/icon/icon-netflix.png",
+            "iconBenefit4": "static/img/icon/icon-disney.png",
+            "iconBenefit5": "static/img/icon/icon-maxstream.png",
+            "textBenefit1": "70% discount on installation fee",
+            "textBenefit2": "Internet speeds up to 100 Mbps",
+            "textBenefit3": "Netflix Basic",
+            "textBenefit4": "OTT Disney+ Hotstar",
+            "textBenefit5": "OTT Max Stream"
+        }
+    ]
+}
